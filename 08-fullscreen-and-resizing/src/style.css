@@ -1,0 +1,24 @@
+/* A */
+/* body {
+  margin: 0;
+} */
+
+/* B */
+/* * {
+  padding: 0;
+  margin: 0;
+} */
+
+/* C */
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+html,
+body {
+  /* prevent overscroll effect */
+  overflow: hidden;
+}
