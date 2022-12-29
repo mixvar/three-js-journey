@@ -75,18 +75,22 @@ const tick2 = () => {
   requestAnimationFrame(tick2);
 };
 
-// animations - GSAP lib
-// GSAP manages its own animation loop
-gsap.to(mesh.position, { x: 2, duration: 1, delay: 1 });
-gsap.to(mesh.position, { x: -2, duration: 1, delay: 2 });
-gsap.to(mesh.position, { x: 0, duration: 1, delay: 3 });
-
+let init = false;
 const tick3 = () => {
+  if (!init) {
+    // animations - GSAP lib
+    // GSAP manages its own animation loop
+    gsap.to(mesh.position, { x: 2, duration: 1, delay: 1 });
+    gsap.to(mesh.position, { x: -2, duration: 1, delay: 2 });
+    gsap.to(mesh.position, { x: 0, duration: 1, delay: 3 });
+    init = true;
+  }
+
   // render
   renderer.render(scene, camera);
   requestAnimationFrame(tick3);
 };
 
-tick1();
+// tick1();
 // tick2();
-// tick3();
+tick3();
