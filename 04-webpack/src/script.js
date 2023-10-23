@@ -35,8 +35,8 @@ renderer.render(scene, camera);
 // some extra stuff xD
 
 const anim = () => {
-  cube.rotateX(0.05);
-  cube.rotateY(0.05);
+  cube.rotateX(0.01);
+  cube.rotateY(0.01);
   renderer.render(scene, camera);
   requestAnimationFrame(anim);
 };

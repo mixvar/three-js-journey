@@ -75,16 +75,16 @@ const tick = () => {
   // Update objects
   //   mesh.rotation.y = elapsedTime;
 
-  //   // move camera on a plane
-  //   camera.position.x = cursor.x * 3;
-  //   camera.position.y = cursor.y * 3;
-  //   camera.lookAt(mesh.position);
+  // move camera on a plane
+  // camera.position.x = cursor.x * 3;
+  // camera.position.y = cursor.y * 3;
+  // camera.lookAt(mesh.position);
 
   // move camera on a cylinder
-  //   camera.position.x = Math.sin(cursor.x * Math.PI) * 2;
-  //   camera.position.z = Math.cos(cursor.x * Math.PI) * 2;
-  //   camera.position.y = cursor.y * 4;
-  //   camera.lookAt(mesh.position);
+  // camera.position.x = Math.sin(cursor.x * Math.PI) * 2;
+  // camera.position.z = Math.cos(cursor.x * Math.PI) * 2;
+  // camera.position.y = cursor.y * 4;
+  // camera.lookAt(mesh.position);
 
   // Render
   renderer.render(scene, camera);

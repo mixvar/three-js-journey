@@ -25,6 +25,7 @@ const scene = new THREE.Scene();
  */
 const textureLoader = new THREE.TextureLoader();
 const matcap = textureLoader.load("textures/matcaps/8.png");
+matcap.colorSpace = THREE.SRGBColorSpace;
 
 /**
  * Fonts
@@ -43,7 +44,10 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
     // bevelSegments: 10,
   });
 
-  const textMaterial = new THREE.MeshMatcapMaterial({ matcap });
+  const textMaterial = new THREE.MeshMatcapMaterial({
+    matcap,
+    flatShading: false,
+  });
   const text = new THREE.Mesh(textGeometry, textMaterial);
   scene.add(text);
 

@@ -75,7 +75,7 @@ scene.add(pointLight);
 // material.flatShading = true;
 
 // C
-// // this creates illusion of having illumination
+// this creates illusion of having illumination
 // const material = new THREE.MeshMatcapMaterial();
 // material.matcap = matcapTexture;
 // material.side = THREE.DoubleSide;
@@ -164,20 +164,6 @@ const sizes = {
   height: window.innerHeight,
 };
 
-window.addEventListener("resize", () => {
-  // Update sizes
-  sizes.width = window.innerWidth;
-  sizes.height = window.innerHeight;
-
-  // Update camera
-  camera.aspect = sizes.width / sizes.height;
-  camera.updateProjectionMatrix();
-
-  // Update renderer
-  renderer.setSize(sizes.width, sizes.height);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-});
-
 /**
  * Camera
  */
@@ -200,11 +186,11 @@ controls.enableDamping = true;
 // GUI
 
 const gui = new Pane({ title: "Params" });
-gui.addInput(material, "wireframe");
+// gui.addInput(material, "wireframe");
 gui.addInput(material, "metalness", { min: 0, max: 1, step: 0.001 });
 gui.addInput(material, "roughness", { min: 0, max: 1, step: 0.001 });
-gui.addInput(material, "aoMapIntensity", { min: 0, max: 2, step: 0.001 });
-gui.addInput(material, "displacementScale", { min: 0, max: 1, step: 0.001 });
+// gui.addInput(material, "aoMapIntensity", { min: 0, max: 2, step: 0.001 });
+// gui.addInput(material, "displacementScale", { min: 0, max: 1, step: 0.001 });
 
 /**
  * Renderer
@@ -243,3 +229,17 @@ const tick = () => {
 };
 
 tick();
+
+window.addEventListener("resize", () => {
+  // Update sizes
+  sizes.width = window.innerWidth;
+  sizes.height = window.innerHeight;
+
+  // Update camera
+  camera.aspect = sizes.width / sizes.height;
+  camera.updateProjectionMatrix();
+
+  // Update renderer
+  renderer.setSize(sizes.width, sizes.height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+});

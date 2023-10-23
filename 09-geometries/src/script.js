@@ -36,7 +36,7 @@ console.log({ positions });
 geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
 
 const material = new THREE.MeshBasicMaterial({
-  color: 0xff0000,
+  color: 0x0000ff,
   wireframe: true,
 });
 const mesh = new THREE.Mesh(geometry, material);
