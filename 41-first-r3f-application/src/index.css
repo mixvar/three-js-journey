@@ -1,0 +1,14 @@
+html,
+body {
+  overscroll-behavior: none;
+  background-color: lightskyblue;
+}
+
+#canvas-container {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
