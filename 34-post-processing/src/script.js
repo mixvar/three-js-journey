@@ -194,6 +194,7 @@ rgbShiftPass.enabled = false;
 effectComposer.addPass(rgbShiftPass);
 
 const unrealBloomPass = new UnrealBloomPass();
+// unrealBloomPass.enabled = false;
 unrealBloomPass.strength = 0.2;
 unrealBloomPass.radius = 1;
 // unrealBloomPass.threshold = 0.5;
@@ -346,6 +347,7 @@ const FuturisticDisplacementShader = {
 const customFuturisticDisplacementPass = new ShaderPass(
   FuturisticDisplacementShader
 );
+customFuturisticDisplacementPass.enabled = false;
 customFuturisticDisplacementPass.material.uniforms.uNormalMap.value =
   shaderNormalTexture;
 
