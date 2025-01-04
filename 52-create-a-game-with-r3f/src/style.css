@@ -1,0 +1,101 @@
+html,
+body,
+#root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: ivory;
+}
+
+.ui-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ui-time {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-size: 6vh;
+  background-color: #00000033;
+  text-align: center;
+  padding: 4px;
+}
+
+/**
+ * Controls
+ */
+.controls {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+}
+
+.controls .raw {
+  display: flex;
+  justify-content: center;
+}
+
+.controls .key {
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  border: 2px solid #ffffff;
+  background: #ffffff44;
+}
+
+.controls .key.large {
+  width: 144px;
+}
+
+.controls .key.active {
+  background: #ffffff99;
+}
+
+.restart {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  color: #ffffff;
+  font-size: 80px;
+  background: #00000033;
+  padding-top: 10px;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 200ms ease-out;
+}
+
+.restart:hover {
+  transform: scale(1.1);
+}
+
+.game-over {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  color: black;
+  font-size: 120px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
