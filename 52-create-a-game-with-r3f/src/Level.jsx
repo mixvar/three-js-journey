@@ -87,8 +87,8 @@ const FinishBlock = ({ position = [0, 0, 0] }) => {
         type="fixed"
         colliders="hull" // cylinder collider would be better
         position={[0, 1, 0]}
-        restitution={5}
-        friction={0}
+        restitution={0}
+        friction={0.5}
         name="finish"
       >
         <mesh receiveShadow castShadow material={wallMaterial}>
