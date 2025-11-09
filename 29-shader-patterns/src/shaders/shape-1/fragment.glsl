@@ -537,25 +537,8 @@ float perlin2dNoise(vec2 P){
 // }
 
 // pattern 50 - perlin + colors
-// void main() {
-//     float strength = step(0.8, sin(perlin2dNoise(vUv * 10.0) * 20.0));
-
-//     vec3 blackColor = vec3(0.0);
-//     vec3 uvColor = vec3(vUv, 0.5);
-
-//     vec3 mixedColor = mix(blackColor, uvColor, strength);
-
-//     gl_FragColor = vec4(mixedColor, 1.0);
-// }
-
-// pattern 51 - fix strength over 1
 void main() {
-    float strength = 0.0; 
-    strength += step(0.9, mod(vUv.x * 10.0, 1.0));
-    strength += step(0.9, mod(vUv.y * 10.0, 1.0));
-
-    // clamp the strength
-    strength = clamp(strength, 0.0, 1.0);
+    float strength = step(0.8, sin(perlin2dNoise(vUv * 10.0) * 20.0));
 
     vec3 blackColor = vec3(0.0);
     vec3 uvColor = vec3(vUv, 0.5);
@@ -564,6 +547,23 @@ void main() {
 
     gl_FragColor = vec4(mixedColor, 1.0);
 }
+
+// pattern 51 - fix strength over 1
+// void main() {
+//     float strength = 0.0; 
+//     strength += step(0.9, mod(vUv.x * 10.0, 1.0));
+//     strength += step(0.9, mod(vUv.y * 10.0, 1.0));
+
+//     // clamp the strength
+//     strength = clamp(strength, 0.0, 1.0);
+
+//     vec3 blackColor = vec3(0.0);
+//     vec3 uvColor = vec3(vUv, 0.5);
+
+//     vec3 mixedColor = mix(blackColor, uvColor, strength);
+
+//     gl_FragColor = vec4(mixedColor, 1.0);
+// }
 
 // TODO: try to finish first attempt at mixed gradients
 // TODO: try to animate some of the shapes
